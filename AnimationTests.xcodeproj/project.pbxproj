@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0604D10329BFFDD8006B4E7E /* NewTweetButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604D10229BFFDD8006B4E7E /* NewTweetButtonAnimation.swift */; };
+		0604D10529BFFEF9006B4E7E /* AnimationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604D10429BFFEF9006B4E7E /* AnimationEnum.swift */; };
+		0604D10729C00B4A006B4E7E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604D10629C00B4A006B4E7E /* MenuView.swift */; };
 		0639610629B2B5100043C07B /* AnimationTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0639610529B2B5100043C07B /* AnimationTestApp.swift */; };
 		0639610829B2B5100043C07B /* CardAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0639610729B2B5100043C07B /* CardAnimation.swift */; };
 		0639610A29B2B5110043C07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0639610929B2B5110043C07B /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0604D10229BFFDD8006B4E7E /* NewTweetButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetButtonAnimation.swift; sourceTree = "<group>"; };
+		0604D10429BFFEF9006B4E7E /* AnimationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEnum.swift; sourceTree = "<group>"; };
+		0604D10629C00B4A006B4E7E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		0639610229B2B5100043C07B /* AnimationTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0639610529B2B5100043C07B /* AnimationTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestApp.swift; sourceTree = "<group>"; };
 		0639610729B2B5100043C07B /* CardAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimation.swift; sourceTree = "<group>"; };
@@ -32,6 +38,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0604D10029BFFD23006B4E7E /* CardAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				0639610729B2B5100043C07B /* CardAnimation.swift */,
+			);
+			path = CardAnimation;
+			sourceTree = "<group>";
+		};
+		0604D10129BFFD38006B4E7E /* NewTweetButtonAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				0604D10229BFFDD8006B4E7E /* NewTweetButtonAnimation.swift */,
+			);
+			path = NewTweetButtonAnimation;
+			sourceTree = "<group>";
+		};
 		063960F929B2B5100043C07B = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +74,10 @@
 			isa = PBXGroup;
 			children = (
 				0639610529B2B5100043C07B /* AnimationTestApp.swift */,
-				0639610729B2B5100043C07B /* CardAnimation.swift */,
+				0604D10629C00B4A006B4E7E /* MenuView.swift */,
+				0604D10429BFFEF9006B4E7E /* AnimationEnum.swift */,
+				0604D10129BFFD38006B4E7E /* NewTweetButtonAnimation */,
+				0604D10029BFFD23006B4E7E /* CardAnimation */,
 				0639610929B2B5110043C07B /* Assets.xcassets */,
 				0639610B29B2B5110043C07B /* Preview Content */,
 			);
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0604D10729C00B4A006B4E7E /* MenuView.swift in Sources */,
 				0639610829B2B5100043C07B /* CardAnimation.swift in Sources */,
 				0639610629B2B5100043C07B /* AnimationTestApp.swift in Sources */,
+				0604D10329BFFDD8006B4E7E /* NewTweetButtonAnimation.swift in Sources */,
+				0604D10529BFFEF9006B4E7E /* AnimationEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +294,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CardAnimationTest/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AnimationTests/Preview Content\"";
 				DEVELOPMENT_TEAM = R5TN67Z99H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,7 +323,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CardAnimationTest/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AnimationTests/Preview Content\"";
 				DEVELOPMENT_TEAM = R5TN67Z99H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

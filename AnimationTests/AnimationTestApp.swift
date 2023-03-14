@@ -11,7 +11,7 @@ import SwiftUI
 struct AnimationTestApp: App {
     var body: some Scene {
         WindowGroup {
-            CardAnimation()
+          MenuView()
         }
     }
 }
