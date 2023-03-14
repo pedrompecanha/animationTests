@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AnimationEnum: String, Identifiable {
+enum AnimationEnum: String, Identifiable, CaseIterable {
     
     var id: Self {
         return self
@@ -16,3 +16,5 @@ enum AnimationEnum: String, Identifiable {
     case card
     case newTweet
 }
+
+

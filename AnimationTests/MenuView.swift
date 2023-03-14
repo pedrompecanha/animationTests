@@ -18,7 +18,7 @@ struct MenuView: View {
     var body: some View {
         
         if !caseSelected {
-            ForEach(viewsArray, content: { enumCase in
+            ForEach(AnimationEnum.allCases, content: { enumCase in
                 Button(action: {
                     animationCase = enumCase
                     caseSelected.toggle()
