@@ -12,16 +12,16 @@ struct MenuView: View {
     
     @State var animationCase: AnimationEnum = .newTweet
     @State var caseSelected = false
-    
-    var viewsArray: [AnimationEnum] {[.card, .newTweet]}
-    
+        
     var body: some View {
         
         if !caseSelected {
             ForEach(AnimationEnum.allCases, content: { enumCase in
                 Button(action: {
-                    animationCase = enumCase
-                    caseSelected.toggle()
+                    withAnimation {
+                        animationCase = enumCase
+                        caseSelected.toggle()
+                    }
                 }, label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
@@ -62,7 +62,11 @@ struct MenuView: View {
         
         VStack{
             HStack{
-                Button(action: {caseSelected.toggle()}) {
+                Button(action: {
+                    withAnimation {
+                        caseSelected.toggle()
+                    }
+                }) {
                     Image(systemName: "chevron.left")
                         .resizable()
                         .scaledToFit()

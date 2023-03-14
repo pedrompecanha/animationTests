@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-let buttonSize:CGFloat = 80
+let buttonSize:CGFloat = 100
 
 struct NewTweetButtonAnimation: View {
     
