@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0639610629B2B5100043C07B /* CardAnimationTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0639610529B2B5100043C07B /* CardAnimationTestApp.swift */; };
-		0639610829B2B5100043C07B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0639610729B2B5100043C07B /* ContentView.swift */; };
+		0639610629B2B5100043C07B /* AnimationTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0639610529B2B5100043C07B /* AnimationTestApp.swift */; };
+		0639610829B2B5100043C07B /* CardAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0639610729B2B5100043C07B /* CardAnimation.swift */; };
 		0639610A29B2B5110043C07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0639610929B2B5110043C07B /* Assets.xcassets */; };
 		0639610D29B2B5110043C07B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0639610C29B2B5110043C07B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0639610229B2B5100043C07B /* AnimationTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0639610529B2B5100043C07B /* CardAnimationTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimationTestApp.swift; sourceTree = "<group>"; };
-		0639610729B2B5100043C07B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0639610529B2B5100043C07B /* AnimationTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestApp.swift; sourceTree = "<group>"; };
+		0639610729B2B5100043C07B /* CardAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimation.swift; sourceTree = "<group>"; };
 		0639610929B2B5110043C07B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0639610C29B2B5110043C07B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -35,7 +35,7 @@
 		063960F929B2B5100043C07B = {
 			isa = PBXGroup;
 			children = (
-				0639610429B2B5100043C07B /* CardAnimationTest */,
+				0639610429B2B5100043C07B /* AnimationTests */,
 				0639610329B2B5100043C07B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,15 +48,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0639610429B2B5100043C07B /* CardAnimationTest */ = {
+		0639610429B2B5100043C07B /* AnimationTests */ = {
 			isa = PBXGroup;
 			children = (
-				0639610529B2B5100043C07B /* CardAnimationTestApp.swift */,
-				0639610729B2B5100043C07B /* ContentView.swift */,
+				0639610529B2B5100043C07B /* AnimationTestApp.swift */,
+				0639610729B2B5100043C07B /* CardAnimation.swift */,
 				0639610929B2B5110043C07B /* Assets.xcassets */,
 				0639610B29B2B5110043C07B /* Preview Content */,
 			);
-			path = CardAnimationTest;
+			path = AnimationTests;
 			sourceTree = "<group>";
 		};
 		0639610B29B2B5110043C07B /* Preview Content */ = {
@@ -137,8 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0639610829B2B5100043C07B /* ContentView.swift in Sources */,
-				0639610629B2B5100043C07B /* CardAnimationTestApp.swift in Sources */,
+				0639610829B2B5100043C07B /* CardAnimation.swift in Sources */,
+				0639610629B2B5100043C07B /* AnimationTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

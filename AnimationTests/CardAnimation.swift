@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CardAnimation: View {
     
     @Namespace var namespace
     @State var isFinalPosition = false
@@ -118,6 +118,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CardAnimation()
     }
 }
