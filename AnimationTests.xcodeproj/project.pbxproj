@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0639610229B2B5100043C07B /* CardAnimationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardAnimationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0639610229B2B5100043C07B /* AnimationTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0639610529B2B5100043C07B /* CardAnimationTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimationTestApp.swift; sourceTree = "<group>"; };
 		0639610729B2B5100043C07B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0639610929B2B5110043C07B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		0639610329B2B5100043C07B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0639610229B2B5100043C07B /* CardAnimationTest.app */,
+				0639610229B2B5100043C07B /* AnimationTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0639610129B2B5100043C07B /* CardAnimationTest */ = {
+		0639610129B2B5100043C07B /* AnimationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0639611029B2B5110043C07B /* Build configuration list for PBXNativeTarget "CardAnimationTest" */;
+			buildConfigurationList = 0639611029B2B5110043C07B /* Build configuration list for PBXNativeTarget "AnimationTests" */;
 			buildPhases = (
 				063960FE29B2B5100043C07B /* Sources */,
 				063960FF29B2B5100043C07B /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = CardAnimationTest;
+			name = AnimationTests;
 			productName = CardAnimationTest;
-			productReference = 0639610229B2B5100043C07B /* CardAnimationTest.app */;
+			productReference = 0639610229B2B5100043C07B /* AnimationTests.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 063960FD29B2B5100043C07B /* Build configuration list for PBXProject "CardAnimationTest" */;
+			buildConfigurationList = 063960FD29B2B5100043C07B /* Build configuration list for PBXProject "AnimationTests" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0639610129B2B5100043C07B /* CardAnimationTest */,
+				0639610129B2B5100043C07B /* AnimationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,7 +280,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pedromp.CardAnimationTest;
+				PRODUCT_BUNDLE_IDENTIFIER = pedromp.AnimationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -309,7 +309,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pedromp.CardAnimationTest;
+				PRODUCT_BUNDLE_IDENTIFIER = pedromp.AnimationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,7 +320,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		063960FD29B2B5100043C07B /* Build configuration list for PBXProject "CardAnimationTest" */ = {
+		063960FD29B2B5100043C07B /* Build configuration list for PBXProject "AnimationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0639610E29B2B5110043C07B /* Debug */,
@@ -329,7 +329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0639611029B2B5110043C07B /* Build configuration list for PBXNativeTarget "CardAnimationTest" */ = {
+		0639611029B2B5110043C07B /* Build configuration list for PBXNativeTarget "AnimationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0639611129B2B5110043C07B /* Debug */,
