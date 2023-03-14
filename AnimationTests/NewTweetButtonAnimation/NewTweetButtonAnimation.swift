@@ -44,7 +44,6 @@ struct NewTweetButtonAnimation: View {
     
     var addTweetView: some View {
         Button(action: {
-            print("tweet added")
             rotationController.toggle()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
                 isShowingAddView.toggle()
@@ -60,7 +59,6 @@ struct NewTweetButtonAnimation: View {
     
     var addSpacesView: some View {
         Button(action: {
-            print("space added")
             rotationController.toggle()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
                 isShowingAddView.toggle()
