@@ -12,7 +12,6 @@ struct MenuView: View {
     
     @State var animationCase: AnimationEnum = .newTweet
     @State var caseSelected = false
-        
     var body: some View {
         
         if !caseSelected {
@@ -35,13 +34,15 @@ struct MenuView: View {
         
         else {
             ZStack {
-                backButton
                 switch animationCase {
                     case .card:
                         CardAnimation()
                     case .newTweet:
                         NewTweetButtonAnimation()
+                    case .cardPage:
+                        CardPageAnimation()
                 }
+                backButton
             }
         }
         
@@ -70,7 +71,7 @@ struct MenuView: View {
                     Image(systemName: "chevron.left")
                         .resizable()
                         .scaledToFit()
-                        .foregroundColor(.black)
+                        .foregroundColor(.green)
                         .frame(width: 22, height: 22)
                         .contentShape(Rectangle())
                         .padding(.leading, 20)
