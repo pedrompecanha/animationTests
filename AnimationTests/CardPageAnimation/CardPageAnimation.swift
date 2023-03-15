@@ -9,6 +9,9 @@ import SwiftUI
 
 let animationDuration: CGFloat = 0.6
 
+private let rectangleHeight: CGFloat = 60
+private let rectangleWidth: CGFloat = 200
+
 struct CardPageAnimation: View {
     
     @Namespace var namespace
@@ -17,9 +20,7 @@ struct CardPageAnimation: View {
     @State var pageController = 0
     var body: some View {
         ZStack {
-            
-//            Color.green
-            
+                        
             if pageController == 0 {
                
                 ZStack {
@@ -33,9 +34,20 @@ struct CardPageAnimation: View {
                         .foregroundColor(.purple)
                         .rotation3DEffect(correctEdges ? Angle(degrees: 0) : Angle(degrees: 50), axis: (x:10 ,y:0,z:0))
                         .matchedGeometryEffect(id: "card1", in: namespace)
-                        .frame(width: 200, height: 50)
-                        .padding(.top, 100)
-                    Spacer()
+                        .frame(width: rectangleWidth, height: rectangleHeight)
+                    HStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundColor(.green)
+                            .rotation3DEffect(correctEdges ? Angle(degrees: 0) : Angle(degrees: 50), axis: (x:10 ,y:0,z:0))
+                            .matchedGeometryEffect(id: "card2", in: namespace)
+                            .frame(width: rectangleWidth/1.2, height: rectangleHeight)
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundColor(.blue)
+                            .rotation3DEffect(correctEdges ? Angle(degrees: 0) : Angle(degrees: 50), axis: (x:10 ,y:0,z:0))
+                            .matchedGeometryEffect(id: "card3", in: namespace)
+                            .frame(width: rectangleWidth/1.2, height: rectangleHeight)
+                    }
+                    .padding(.top, 20)
                 }.onAppear{
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2 , execute: {
                         withAnimation {
@@ -104,11 +116,14 @@ struct CardPageAnimation: View {
         let geometryEffectID: String
         
         var body: some View {
-            RoundedRectangle(cornerRadius: 20)
-                .foregroundStyle(material)
-                .rotation3DEffect(rotationAngle, axis: (x:10 ,y:0,z:0))
-                .matchedGeometryEffect(id: geometryEffectID, in: namespace)
-                .frame(width: 150, height: 150, alignment: .center)
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .foregroundStyle(material)
+                    .rotation3DEffect(rotationAngle, axis: (x:10 ,y:0,z:0))
+                    .matchedGeometryEffect(id: geometryEffectID, in: namespace)
+                    .frame(width: 150, height: 150, alignment: .center)
+          
+            }
         }
     }
     
