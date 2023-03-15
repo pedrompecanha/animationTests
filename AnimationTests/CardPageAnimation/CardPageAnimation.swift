@@ -72,13 +72,11 @@ struct CardPageAnimation: View {
                 
                 
                  if page == 0 {
-                     withAnimation {
+                     withAnimation (.easeInOut(duration: 0.1)) {
                          correctEdges = false
                      }
                  }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     pageController = page
-                }
                 
                 
                
