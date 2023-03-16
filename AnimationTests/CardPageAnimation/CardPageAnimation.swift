@@ -49,7 +49,7 @@ struct CardPageAnimation: View {
                     }
                     .padding(.top, 20)
                 }.onAppear{
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2 , execute: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 , execute: {
                         withAnimation {
                             correctEdges = true
                         }
