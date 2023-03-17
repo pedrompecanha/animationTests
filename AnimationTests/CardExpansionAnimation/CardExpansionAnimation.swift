@@ -71,39 +71,53 @@ struct expandedRectangle: View {
     @Binding var globalRectangleID: Int
     @Binding var globalPlaceID: String
     @Binding var globalTemperatureID: String
+    @State var fontSize: CGFloat = 30
     var namespace: Namespace.ID
     var matchedGeometryID: Int
     var placeTextID: String {String("place" + String(matchedGeometryID))}
     var temperatureTextID: String {"temperature" + String(matchedGeometryID)}
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .matchedGeometryEffect(id: globalRectangleID , in: namespace)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                .foregroundColor(.white)
-                .opacity(0.2)
+        GeometryReader {geo in
+            ZStack {
+                Rectangle()
+                    .matchedGeometryEffect(id: globalRectangleID , in: namespace)
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .foregroundColor(.white)
+                    .opacity(0.2)
                 
-            VStack() {
-                Text (viewData.place)
-                    .matchedGeometryEffect(id: globalPlaceID, in: namespace)
-                    .font(.title.weight(.bold))
-                    .foregroundColor(.white)
-                    .padding(.top, 70)
-                Text (viewData.temperature.string)
-                    .matchedGeometryEffect(id: globalTemperatureID, in: namespace)
-                    .font(.title.weight(.bold))
-                    .foregroundColor(.white)
-                Button(action: {isExpanded.toggle()}, label: {
-                    Text ("go back")
-                })
+                VStack() {
+                    Text (viewData.place)
+                        .matchedGeometryEffect(id: globalPlaceID, in: namespace)
+                        .font(.system(size: fontSize).weight(.bold))
+                        .contentTransition(.interpolate)
+                        .foregroundColor(.white)
+                        .padding(.top, 70)
+                    Text (viewData.temperature.string)
+                        .matchedGeometryEffect(id: globalTemperatureID, in: namespace)
+                        .font(.title.weight(.bold))
+                        .foregroundColor(.white)
+                    Button(action: {
+                        isExpanded.toggle()
+                        withAnimation {
+                            fontSize = 30
+                        }
+                    }, label: {
+                        Text ("go back")
+                    })
                     .buttonStyle(.borderedProminent)
-
+                    
+                }
+                
+                
             }
-           
+            .onAppear {
+                withAnimation {
+                    fontSize = 70
+                }
+            }
             
         }
-        
       
     }
 
@@ -130,9 +144,9 @@ struct smallRectangle: View {
                 .foregroundStyle(.regularMaterial)
             HStack {
                 Text (viewData.place)
-                    .font(.title.weight(.bold))
-                    .clipped()
                     .matchedGeometryEffect(id: placeTextID, in: namespace)
+                    .font(.system(size: 30).weight(.bold))
+                    .contentTransition(.interpolate)
                 Text (viewData.temperature.string)
                     .font(.title.weight(.bold))
                     .matchedGeometryEffect(id: temperatureTextID, in: namespace)
