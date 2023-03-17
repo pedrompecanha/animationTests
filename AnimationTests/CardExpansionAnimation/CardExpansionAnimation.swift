@@ -89,7 +89,7 @@ struct expandedRectangle: View {
                 VStack() {
                     Text (viewData.place)
                         .matchedGeometryEffect(id: globalPlaceID, in: namespace)
-                        .animatableFont(name: "SFPro-Bold", size: fontSize)
+                        .animatableFont(name: "SFPro", size: fontSize)
                         .foregroundColor(.white)
                         .padding(.top, 70)
                         .background(.red)
@@ -193,7 +193,7 @@ struct AnimatableCustomFontModifier: ViewModifier, Animatable {
 
     func body(content: Content) -> some View {
         content
-            .font(.custom(name, size: size))
+            .font(.system(size: size).weight(.bold))
     }
 }
 
