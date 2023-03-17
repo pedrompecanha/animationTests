@@ -24,7 +24,7 @@ struct MenuView: View {
                 }, label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .frame(width: 100, height: 50)
+                            .frame(width: 200, height: 50)
                         Text (enumCase.rawValue)
                             .foregroundColor(.white)
                     }
@@ -33,16 +33,20 @@ struct MenuView: View {
         }
         
         else {
-            ZStack {
-                switch animationCase {
-                    case .card:
-                        CardAnimation()
-                    case .newTweet:
-                        NewTweetButtonAnimation()
-                    case .cardPage:
-                        CardPageAnimation()
-                }
-                backButton
+            GeometryReader { geo in
+                ZStack {
+                    switch animationCase {
+                        case .card:
+                            CardAnimation()
+                        case .newTweet:
+                            NewTweetButtonAnimation()
+                        case .cardPage:
+                            CardPageAnimation()
+                        case .cardExpansion:
+                            CardExpansionAnimation()
+                    }
+                    backButton
+                }.frame(width: geo.size.width, height: geo.size.height)
             }
         }
         
