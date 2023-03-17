@@ -16,6 +16,7 @@ enum AnimationEnum: String, Identifiable, CaseIterable {
     case card
     case newTweet
     case cardPage
+    case cardExpansion
 }
 
 

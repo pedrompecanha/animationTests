@@ -11,6 +11,7 @@
 		0604D10529BFFEF9006B4E7E /* AnimationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604D10429BFFEF9006B4E7E /* AnimationEnum.swift */; };
 		0604D10729C00B4A006B4E7E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604D10629C00B4A006B4E7E /* MenuView.swift */; };
 		0604D10A29C1F811006B4E7E /* CardPageAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604D10929C1F811006B4E7E /* CardPageAnimation.swift */; };
+		0604D10E29C3477A006B4E7E /* CardExpansionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604D10D29C3477A006B4E7E /* CardExpansionAnimation.swift */; };
 		0639610629B2B5100043C07B /* AnimationTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0639610529B2B5100043C07B /* AnimationTestApp.swift */; };
 		0639610829B2B5100043C07B /* CardAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0639610729B2B5100043C07B /* CardAnimation.swift */; };
 		0639610A29B2B5110043C07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0639610929B2B5110043C07B /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		0604D10429BFFEF9006B4E7E /* AnimationEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationEnum.swift; sourceTree = "<group>"; };
 		0604D10629C00B4A006B4E7E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		0604D10929C1F811006B4E7E /* CardPageAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPageAnimation.swift; sourceTree = "<group>"; };
+		0604D10D29C3477A006B4E7E /* CardExpansionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExpansionAnimation.swift; sourceTree = "<group>"; };
 		0639610229B2B5100043C07B /* AnimationTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0639610529B2B5100043C07B /* AnimationTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestApp.swift; sourceTree = "<group>"; };
 		0639610729B2B5100043C07B /* CardAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimation.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 			path = CardPageAnimation;
 			sourceTree = "<group>";
 		};
+		0604D10C29C34767006B4E7E /* CardExpansionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				0604D10D29C3477A006B4E7E /* CardExpansionAnimation.swift */,
+			);
+			path = CardExpansionAnimation;
+			sourceTree = "<group>";
+		};
 		063960F929B2B5100043C07B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		0639610429B2B5100043C07B /* AnimationTests */ = {
 			isa = PBXGroup;
 			children = (
+				0604D10C29C34767006B4E7E /* CardExpansionAnimation */,
 				0604D10829C1F7D7006B4E7E /* CardPageAnimation */,
 				0639610529B2B5100043C07B /* AnimationTestApp.swift */,
 				0604D10629C00B4A006B4E7E /* MenuView.swift */,
@@ -179,6 +190,7 @@
 				0604D10329BFFDD8006B4E7E /* NewTweetButtonAnimation.swift in Sources */,
 				0604D10529BFFEF9006B4E7E /* AnimationEnum.swift in Sources */,
 				0604D10A29C1F811006B4E7E /* CardPageAnimation.swift in Sources */,
+				0604D10E29C3477A006B4E7E /* CardExpansionAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
