@@ -38,7 +38,7 @@ struct CardExpansionAnimation: View {
                 }
             }
         .ignoresSafeArea()
-        .animation(.easeInOut, value: isExpanded)
+        .animation(.easeInOut(duration: 0.5), value: isExpanded)
         .frame(width: geo.size.width, height: geo.size.height)
         .background(LinearGradient(colors: [.blue, .cyan], startPoint: .bottomLeading, endPoint: .topTrailing))
             
@@ -89,14 +89,15 @@ struct expandedRectangle: View {
                 VStack() {
                     Text (viewData.place)
                         .matchedGeometryEffect(id: globalPlaceID, in: namespace)
-                        .font(.system(size: fontSize).weight(.bold))
-                        .contentTransition(.interpolate)
+                        .animatableFont(name: "SFPro-Bold", size: fontSize)
                         .foregroundColor(.white)
                         .padding(.top, 70)
+                        .background(.red)
                     Text (viewData.temperature.string)
                         .matchedGeometryEffect(id: globalTemperatureID, in: namespace)
                         .font(.title.weight(.bold))
                         .foregroundColor(.white)
+                        
                     Button(action: {
                         isExpanded.toggle()
                         withAnimation {
@@ -112,9 +113,12 @@ struct expandedRectangle: View {
                 
             }
             .onAppear {
-                withAnimation {
-                    fontSize = 70
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    withAnimation {
+                        fontSize = 70
+                    }
                 }
+                
             }
             
         }
@@ -144,9 +148,9 @@ struct smallRectangle: View {
                 .foregroundStyle(.regularMaterial)
             HStack {
                 Text (viewData.place)
+                    .animatableFont(name: "SFPro-Bold", size: 30)
                     .matchedGeometryEffect(id: placeTextID, in: namespace)
-                    .font(.system(size: 30).weight(.bold))
-                    .contentTransition(.interpolate)
+                    .background(.red)
                 Text (viewData.temperature.string)
                     .font(.title.weight(.bold))
                     .matchedGeometryEffect(id: temperatureTextID, in: namespace)
@@ -177,3 +181,26 @@ extension Int {
     }
 }
 
+// A modifier that animates a font through various sizes.
+struct AnimatableCustomFontModifier: ViewModifier, Animatable {
+    var name: String
+    var size: Double
+
+    var animatableData: Double {
+        get { size }
+        set { size = newValue }
+    }
+
+    func body(content: Content) -> some View {
+        content
+            .font(.custom(name, size: size))
+    }
+}
+
+// To make that easier to use, I recommend wrapping
+// it in a `View` extension, like this:
+extension View {
+    func animatableFont(name: String, size: Double) -> some View {
+        self.modifier(AnimatableCustomFontModifier(name: name, size: size))
+    }
+}
