@@ -17,6 +17,7 @@
 		0604D11429C555BB006B4E7E /* CollapsedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604D11329C555BB006B4E7E /* CollapsedCardView.swift */; };
 		0604D11629C555F8006B4E7E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604D11529C555F8006B4E7E /* Extensions.swift */; };
 		0604D11829C55C41006B4E7E /* MagicNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604D11729C55C41006B4E7E /* MagicNumbers.swift */; };
+		0604D11A29C563F2006B4E7E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0604D11929C563F2006B4E7E /* Card.swift */; };
 		0639610629B2B5100043C07B /* AnimationTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0639610529B2B5100043C07B /* AnimationTestApp.swift */; };
 		0639610829B2B5100043C07B /* CardAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0639610729B2B5100043C07B /* CardAnimation.swift */; };
 		0639610A29B2B5110043C07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0639610929B2B5110043C07B /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		0604D11329C555BB006B4E7E /* CollapsedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsedCardView.swift; sourceTree = "<group>"; };
 		0604D11529C555F8006B4E7E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0604D11729C55C41006B4E7E /* MagicNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicNumbers.swift; sourceTree = "<group>"; };
+		0604D11929C563F2006B4E7E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0639610229B2B5100043C07B /* AnimationTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0639610529B2B5100043C07B /* AnimationTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestApp.swift; sourceTree = "<group>"; };
 		0639610729B2B5100043C07B /* CardAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimation.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				0604D10929C1F811006B4E7E /* CardPageAnimation.swift */,
+				0604D11929C563F2006B4E7E /* Card.swift */,
 			);
 			path = CardPageAnimation;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				0639610829B2B5100043C07B /* CardAnimation.swift in Sources */,
 				0639610629B2B5100043C07B /* AnimationTestApp.swift in Sources */,
 				0604D10329BFFDD8006B4E7E /* NewTweetButtonAnimation.swift in Sources */,
+				0604D11A29C563F2006B4E7E /* Card.swift in Sources */,
 				0604D11229C55579006B4E7E /* DetailedCardView.swift in Sources */,
 				0604D10529BFFEF9006B4E7E /* AnimationEnum.swift in Sources */,
 				0604D11029C55541006B4E7E /* ClimateModel.swift in Sources */,
