@@ -18,61 +18,27 @@ struct CardPageAnimation: View {
     @State var page: Int = 0
     @State var correctEdges = false
     @State var pageController = 0
+    
     var body: some View {
         ZStack {
                         
             if pageController == 0 {
-               
-                ZStack {
                     cardStack
-                }
+            }
+            
+            else if pageController == 1 {
+                threeRectangleView
             }
             
             else {
-                VStack {
-                    RoundedRectangle(cornerRadius: 20)
-                        .foregroundColor(.purple)
-                        .rotation3DEffect(correctEdges ? Angle(degrees: 0) : Angle(degrees: 50), axis: (x:10 ,y:0,z:0))
-                        .matchedGeometryEffect(id: "card1", in: namespace)
-                        .frame(width: rectangleWidth, height: rectangleHeight)
-                    HStack {
-                        RoundedRectangle(cornerRadius: 20)
-                            .foregroundColor(.green)
-                            .rotation3DEffect(correctEdges ? Angle(degrees: 0) : Angle(degrees: 50), axis: (x:10 ,y:0,z:0))
-                            .matchedGeometryEffect(id: "card2", in: namespace)
-                            .frame(width: rectangleWidth/1.2, height: rectangleHeight)
-                        RoundedRectangle(cornerRadius: 20)
-                            .foregroundColor(.blue)
-                            .rotation3DEffect(correctEdges ? Angle(degrees: 0) : Angle(degrees: 50), axis: (x:10 ,y:0,z:0))
-                            .matchedGeometryEffect(id: "card3", in: namespace)
-                            .frame(width: rectangleWidth/1.2, height: rectangleHeight)
-                    }
-                    .padding(.top, 20)
-                }.onAppear{
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 , execute: {
-                        withAnimation {
-                            correctEdges = true
-                        }
-                    })
-                }
-                
+              threeCircleView
             }
-       
             TabView(selection: $page) {
-                Rectangle()
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                    .opacity(0)
-                    .contentShape(Rectangle())
+                tabViewEmptyRectangle
                     .tag(0)
-                Rectangle()
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                    .opacity(0)
-                    .contentShape(Rectangle())
+                tabViewEmptyRectangle
                     .tag(1)
-                Rectangle()
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                    .opacity(0)
-                    .contentShape(Rectangle())
+                tabViewEmptyRectangle
                     .tag(2)
             }
             .tabViewStyle(.page)
@@ -98,6 +64,64 @@ struct CardPageAnimation: View {
            
     }
     
+    var tabViewEmptyRectangle: some View {
+        Rectangle()
+            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            .opacity(0)
+            .contentShape(Rectangle())
+    }
+    
+    var threeRectangleView: some View {
+        VStack {
+            RoundedRectangle(cornerRadius: 20)
+                .foregroundColor(.purple)
+                .rotation3DEffect(correctEdges ? Angle(degrees: 0) : Angle(degrees: 50), axis: (x:10 ,y:0,z:0))
+                .matchedGeometryEffect(id: "card1", in: namespace)
+                .frame(width: rectangleWidth, height: rectangleHeight)
+            HStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .foregroundColor(.green)
+                    .rotation3DEffect(correctEdges ? Angle(degrees: 0) : Angle(degrees: 50), axis: (x:10 ,y:0,z:0))
+                    .matchedGeometryEffect(id: "card2", in: namespace)
+                    .frame(width: rectangleWidth/1.2, height: rectangleHeight)
+                RoundedRectangle(cornerRadius: 20)
+                    .foregroundColor(.blue)
+                    .rotation3DEffect(correctEdges ? Angle(degrees: 0) : Angle(degrees: 50), axis: (x:10 ,y:0,z:0))
+                    .matchedGeometryEffect(id: "card3", in: namespace)
+                    .frame(width: rectangleWidth/1.2, height: rectangleHeight)
+            }
+            .padding(.top, 20)
+        }.onAppear{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 , execute: {
+                withAnimation {
+                    correctEdges = true
+                }
+            })
+        }
+    }
+    
+    var threeCircleView: some View {
+        VStack {
+            RoundedRectangle(cornerRadius: rectangleHeight/2)
+                .foregroundColor(.purple)
+                .matchedGeometryEffect(id: "card1", in: namespace)
+                .frame(width: rectangleHeight, height: rectangleHeight)
+            HStack {
+                RoundedRectangle(cornerRadius: rectangleHeight/2)
+                    .foregroundColor(.green)
+                    .matchedGeometryEffect(id: "card2", in: namespace)
+                    .frame(width: rectangleHeight, height: rectangleHeight)
+                    .padding(.trailing, 20)
+                RoundedRectangle(cornerRadius: rectangleHeight/2)
+                    .foregroundColor(.blue)
+                    .matchedGeometryEffect(id: "card3", in: namespace)
+                    .frame(width: rectangleHeight, height: rectangleHeight)
+                    .padding(.leading, 20)
+
+            }
+            .padding(.top, 20)
+        }
+    }
     
     
     var cardStack: some View {
@@ -106,26 +130,10 @@ struct CardPageAnimation: View {
             Card(material: .regularMaterial, rotationAngle: Angle(degrees: 40), namespace: namespace, geometryEffectID: "card2")
             Card(material: .regular, rotationAngle: Angle(degrees: 50), namespace: namespace, geometryEffectID: "card1")
         }
+       
     }
     
-    struct Card: View {
-        
-        let material: Material
-        let rotationAngle: Angle
-        let namespace: Namespace.ID
-        let geometryEffectID: String
-        
-        var body: some View {
-            ZStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .foregroundStyle(material)
-                    .rotation3DEffect(rotationAngle, axis: (x:10 ,y:0,z:0))
-                    .matchedGeometryEffect(id: geometryEffectID, in: namespace)
-                    .frame(width: 150, height: 150, alignment: .center)
-          
-            }
-        }
-    }
+    
     
 }
 
