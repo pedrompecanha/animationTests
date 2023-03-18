@@ -57,8 +57,9 @@ struct DetailedCard: View {
                             temperatureFontSize = MagicNumbers.collapsedTemperatureSize
                         }
                     }, label: {
-                        Text ("go back")
+                        Text ("Return to Menu")
                     })
+                    .padding(.bottom, 30)
                     .buttonStyle(.borderedProminent)
                     
                 }
