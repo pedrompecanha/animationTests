@@ -44,6 +44,8 @@ struct MenuView: View {
                             CardPageAnimation()
                         case .cardExpansion:
                             CardExpansionAnimation()
+                        case .openiPhone:
+                            OpeniPhoneAnimation()
                     }
                     backButton
                 }.frame(width: geo.size.width, height: geo.size.height)

@@ -22,6 +22,7 @@
 		0639610829B2B5100043C07B /* CardAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0639610729B2B5100043C07B /* CardAnimation.swift */; };
 		0639610A29B2B5110043C07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0639610929B2B5110043C07B /* Assets.xcassets */; };
 		0639610D29B2B5110043C07B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0639610C29B2B5110043C07B /* Preview Assets.xcassets */; };
+		06B4F7CB29FF68C900AC5B29 /* OpeniPhoneAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B4F7CA29FF68C900AC5B29 /* OpeniPhoneAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		0639610729B2B5100043C07B /* CardAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimation.swift; sourceTree = "<group>"; };
 		0639610929B2B5110043C07B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0639610C29B2B5110043C07B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		06B4F7CA29FF68C900AC5B29 /* OpeniPhoneAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeniPhoneAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		0639610429B2B5100043C07B /* AnimationTests */ = {
 			isa = PBXGroup;
 			children = (
+				06B4F7C929FF68B100AC5B29 /* OpeniPhoneAnimation */,
 				0604D10C29C34767006B4E7E /* CardExpansionAnimation */,
 				0604D10829C1F7D7006B4E7E /* CardPageAnimation */,
 				0639610529B2B5100043C07B /* AnimationTestApp.swift */,
@@ -130,6 +133,14 @@
 				0639610C29B2B5110043C07B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		06B4F7C929FF68B100AC5B29 /* OpeniPhoneAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				06B4F7CA29FF68C900AC5B29 /* OpeniPhoneAnimation.swift */,
+			);
+			path = OpeniPhoneAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				0639610629B2B5100043C07B /* AnimationTestApp.swift in Sources */,
 				0604D10329BFFDD8006B4E7E /* NewTweetButtonAnimation.swift in Sources */,
 				0604D11A29C563F2006B4E7E /* Card.swift in Sources */,
+				06B4F7CB29FF68C900AC5B29 /* OpeniPhoneAnimation.swift in Sources */,
 				0604D11229C55579006B4E7E /* DetailedCardView.swift in Sources */,
 				0604D10529BFFEF9006B4E7E /* AnimationEnum.swift in Sources */,
 				0604D11029C55541006B4E7E /* ClimateModel.swift in Sources */,
